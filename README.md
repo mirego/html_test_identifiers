@@ -38,6 +38,35 @@ If there is no configuration, `HtmlTestIdentifiers.NoTestID` will be used by def
     HtmlTestIdentifiers.testid_key("hello")
     # => nil
 
+## Usages
+
+```elixir
+defmodule MyView do
+  import HtmlTestIdentifiers
+end
+```
+
+Considering `.eex` file content
+
+```elixir
+<h1 <%= testid_attribute("title-id") %>>Title</h1>
+<%= content_tag :p, "paragraph text content", data_testid: testid_key("paragraph-id") %>
+```
+
+with `config :html_test_identifiers, provider: HtmlTestIdentifiers.TestID`, resulting HTML will be
+
+```html
+<h1 data-testid="title-id">Title</h1>
+<p data-testid="paragraph-id">paragraph text content</p>
+```
+
+with `config :html_test_identifiers, provider: HtmlTestIdentifiers.NoTestID`, resulting HTML will be
+
+```html
+<h1>Title</h1>
+<p>paragraph text content</p>
+```
+
 ## Installation
 
 The package can be installed by adding `html_test_identifiers` to your list of dependencies in `mix.exs`:
