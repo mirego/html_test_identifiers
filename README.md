@@ -40,17 +40,26 @@ If there is no configuration, `HtmlTestIdentifiers.NoTestID` will be used by def
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `html_test_identifiers` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `html_test_identifiers` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:html_test_identifiers, "~> 0.1.0"}
+    {:html_test_identifiers, github: "mirego/html_test_identifiers", tag: "v0.1.0"}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/html_test_identifiers](https://hexdocs.pm/html_test_identifiers).
+## Contributors
+
+- @romarickb
+
+## License
+
+`html_test_identifiers` is © 2019 [Mirego](https://www.mirego.com) and may be freely distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause). See the [`LICENSE.md`](https://github.com/mirego/html_test_identifiers/blob/master/LICENSE.md) file.
+
+## About Mirego
+
+[Mirego](https://www.mirego.com) is a team of passionate people who believe that work is a place where you can innovate and have fun. We’re a team of [talented people](https://life.mirego.com) who imagine and build beautiful Web and mobile applications. We come together to share ideas and [change the world](http://www.mirego.org).
+
+We also [love open-source software](https://open.mirego.com) and we try to give back to the community as much as we can.

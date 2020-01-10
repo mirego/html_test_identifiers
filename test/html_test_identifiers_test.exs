@@ -1,7 +1,7 @@
 defmodule HtmlTestIdentifiersTest do
   use ExUnit.Case
 
-  import HtmlTestIdentifiersTest.EnvironmentHelpers
+  import HtmlTestIdentifiersTest.Environment
 
   describe "TestID is configured" do
     setup do
