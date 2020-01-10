@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/mirego/html_test_identifiers/workflows/CI/badge.svg?branch=master)](https://github.com/mirego/html_test_identifiers/actions)
+
 # HtmlTestIdentifiers
 
 Provides the basic functionality to add `data-testid` attribute depending on configuration.
