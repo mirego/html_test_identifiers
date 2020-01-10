@@ -41,7 +41,7 @@ If there is no configuration, `HtmlTestIdentifiers.NoTestID` will be used by def
 ## Usages
 
 ```elixir
-defmofule MyView do
+defmodule MyView do
   import HtmlTestIdentifiers
 end
 ```
@@ -49,7 +49,7 @@ end
 Considering `.eex` file content
 
 ```elixir
-<h1 <%= testid_attribute("title-id") %>> Title </h1>
+<h1 <%= testid_attribute("title-id") %>>Title</h1>
 <%= content_tag :p, "paragraph text content", data_testid: testid_key("paragraph-id") %>
 ```
 
