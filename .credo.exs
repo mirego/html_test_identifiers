@@ -56,7 +56,6 @@
         {Credo.Check.Warning.UnusedStringOperation},
         {Credo.Check.Warning.UnusedTupleOperation},
         {Credo.Check.Warning.OperationWithConstantResult},
-        {CredoEnvvar.Check.Warning.EnvironmentVariablesAtCompileTime},
         {CredoNaming.Check.Warning.AvoidSpecificTermsInModuleNames,
          terms: [
            "Manager",
@@ -68,11 +67,7 @@
            ~r/^Utils?$/i
          ]},
         {CredoNaming.Check.Consistency.ModuleFilename,
-         excluded_paths: ["config", "mix.exs", "priv", "test/support"],
-         acronyms: [
-           {"ElixirBoilerplateGraphQL", "elixir_boilerplate_graphql"},
-           {"GraphQL", "graphql"}
-         ]}
+         excluded_paths: ["config", "mix.exs", "priv", "test/support"]}
       ]
     }
   ]
