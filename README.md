@@ -1,6 +1,6 @@
 [![Actions Status](https://github.com/mirego/html_test_identifiers/workflows/CI/badge.svg?branch%3Amaster)](https://github.com/mirego/html_test_identifiers/actions)
 
-# HtmlTestIdentifiers
+# HTMLTestIdentifiers
 
 Provides the basic functionality to add `data-testid` attribute depending on configuration.
 
@@ -9,40 +9,40 @@ Provides the basic functionality to add `data-testid` attribute depending on con
 Add the following to your config files if you want `data-testid` included in your release :
 
 ```elixir
-config :html_test_identifiers, provider: HtmlTestIdentifiers.TestID
+config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID
 ```
 
 Add the following to your config files if you don't want `data_testid` attribute to be included in your release :
 
 ```elixir
-config :html_test_identifiers, provider: HtmlTestIdentifiers.NoTestID
+config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID
 ```
 
-If there is no configuration, `HtmlTestIdentifiers.NoTestID` will be used by default
+If there is no configuration, `HTMLTestIdentifiers.NoTestID` will be used by default
 
 ## Examples
 
-    with `config :html_test_identifiers, provider: HtmlTestIdentifiers.TestID`
+    with `config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID`
 
-    HtmlTestIdentifiers.testid_attribute("hello")
+    HTMLTestIdentifiers.testid_attribute("hello")
     # => "data-testid=\"hello\"
 
-    HtmlTestIdentifiers.testid_key("hello")
+    HTMLTestIdentifiers.testid_key("hello")
     # => "hello"
 
-    with `config :html_test_identifiers, provider: HtmlTestIdentifiers.NoTestID`
+    with `config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID`
 
-    HtmlTestIdentifiers.testid_attribute("hello")
+    HTMLTestIdentifiers.testid_attribute("hello")
     # => nil
 
-    HtmlTestIdentifiers.testid_key("hello")
+    HTMLTestIdentifiers.testid_key("hello")
     # => nil
 
 ## Usages
 
 ```elixir
 defmodule MyView do
-  import HtmlTestIdentifiers
+  import HTMLTestIdentifiers
 end
 ```
 
@@ -53,14 +53,14 @@ Considering `.eex` file content
 <%= content_tag :p, "paragraph text content", data_testid: testid_key("paragraph-id") %>
 ```
 
-with `config :html_test_identifiers, provider: HtmlTestIdentifiers.TestID`, resulting HTML will be
+with `config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID`, resulting HTML will be
 
 ```html
 <h1 data-testid="title-id">Title</h1>
 <p data-testid="paragraph-id">paragraph text content</p>
 ```
 
-with `config :html_test_identifiers, provider: HtmlTestIdentifiers.NoTestID`, resulting HTML will be
+with `config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID`, resulting HTML will be
 
 ```html
 <h1>Title</h1>

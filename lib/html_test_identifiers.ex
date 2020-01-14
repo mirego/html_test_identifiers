@@ -1,32 +1,32 @@
-defmodule HtmlTestIdentifiers do
+defmodule HTMLTestIdentifiers do
   @moduledoc """
   Provides the basic functionality to add `data-testid` attribute depending on configuration.
 
   ## Configuration
   Add the following to your config files if you want `data-testid` included in your release :
-      config :html_test_identifiers, provider: HtmlTestIdentifiers.TestID
+      config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID
 
   Add the following to your config files if you don't want `data_testid` attribute to be included in your release :
-      config :html_test_identifiers, provider: HtmlTestIdentifiers.NoTestID
+      config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID
 
-  If there is no configuration, `HtmlTestIdentifiers.NoTestID` will be used by default
+  If there is no configuration, `HTMLTestIdentifiers.NoTestID` will be used by default
 
   ## Examples
 
-      with `config :html_test_identifiers, provider: HtmlTestIdentifiers.TestID`
+      with `config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID`
 
-      HtmlTestIdentifiers.testid_attribute("hello")
+      HTMLTestIdentifiers.testid_attribute("hello")
       # => "data-testid=\"hello\"
 
-      HtmlTestIdentifiers.testid_key("hello")
+      HTMLTestIdentifiers.testid_key("hello")
       # => "hello"
 
-      with `config :html_test_identifiers, provider: HtmlTestIdentifiers.NoTestID`
+      with `config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID`
 
-      HtmlTestIdentifiers.testid_attribute("hello")
+      HTMLTestIdentifiers.testid_attribute("hello")
       # => nil
 
-      HtmlTestIdentifiers.testid_key("hello")
+      HTMLTestIdentifiers.testid_key("hello")
       # => nil
 
   """
@@ -40,7 +40,7 @@ defmodule HtmlTestIdentifiers do
         value
 
       :error ->
-        HtmlTestIdentifiers.NoTestID
+        HTMLTestIdentifiers.NoTestID
     end
   end
 end
