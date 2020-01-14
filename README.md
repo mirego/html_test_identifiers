@@ -74,7 +74,7 @@ The package can be installed by adding `html_test_identifiers` to your list of d
 ```elixir
 def deps do
   [
-    {:html_test_identifiers, github: "mirego/html_test_identifiers", tag: "v0.1.0"}
+    {:html_test_identifiers, github: "mirego/html_test_identifiers", tag: "v0.1.1"}
   ]
 end
 ```
