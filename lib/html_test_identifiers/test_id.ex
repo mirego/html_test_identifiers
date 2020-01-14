@@ -1,4 +1,4 @@
-defmodule HtmlTestIdentifiers.TestID do
+defmodule HTMLTestIdentifiers.TestID do
   @moduledoc """
     Functions which returns key or attribute with key
   """

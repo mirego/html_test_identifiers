@@ -1,4 +1,4 @@
-defmodule HtmlTestIdentifiersTest.Environment do
+defmodule HTMLTestIdentifiersTest.Environment do
   def modify_env(app, overrides) do
     original_env = Application.get_all_env(app)
     Enum.each(overrides, fn {key, value} -> Application.put_env(app, key, value) end)

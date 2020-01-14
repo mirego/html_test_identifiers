@@ -1,4 +1,4 @@
-defmodule HtmlTestIdentifiers.NoTestID do
+defmodule HTMLTestIdentifiers.NoTestID do
   @moduledoc """
     All functions return nil
   """
