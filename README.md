@@ -1,8 +1,20 @@
-[![Actions Status](https://github.com/mirego/html_test_identifiers/workflows/CI/badge.svg?branch%3Amaster)](https://github.com/mirego/html_test_identifiers/actions)
+[![](https://github.com/mirego/html_test_identifiers/workflows/CI/badge.svg?branch%3Amaster)](https://github.com/mirego/html_test_identifiers/actions)
 
 # HTMLTestIdentifiers
 
 Provides the basic functionality to add `data-testid` attribute depending on configuration.
+
+## Installation
+
+The package can be installed by adding `html_test_identifiers` to your list of dependencies in `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:html_test_identifiers, github: "mirego/html_test_identifiers", tag: "v0.1.1"}
+  ]
+end
+```
 
 ## Configuration
 
@@ -20,25 +32,27 @@ config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID
 
 If there is no configuration, `HTMLTestIdentifiers.NoTestID` will be used by default
 
-## Examples
+## Usage
 
-    with `config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID`
+```elixir
+# With `config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID`
 
-    HTMLTestIdentifiers.testid_attribute("hello")
-    # => "data-testid=\"hello\"
+HTMLTestIdentifiers.testid_attribute("hello")
+# => "data-testid=\"hello\"
 
-    HTMLTestIdentifiers.testid_key("hello")
-    # => "hello"
+HTMLTestIdentifiers.testid_key("hello")
+# => "hello"
 
-    with `config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID`
+# With `config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID`
 
-    HTMLTestIdentifiers.testid_attribute("hello")
-    # => nil
+HTMLTestIdentifiers.testid_attribute("hello")
+# => nil
 
-    HTMLTestIdentifiers.testid_key("hello")
-    # => nil
+HTMLTestIdentifiers.testid_key("hello")
+# => nil
+```
 
-## Usages
+You can also import the module in a view helpers module:
 
 ```elixir
 defmodule MyView do
@@ -65,18 +79,6 @@ with `config :html_test_identifiers, provider: HTMLTestIdentifiers.NoTestID`, re
 ```html
 <h1>Title</h1>
 <p>paragraph text content</p>
-```
-
-## Installation
-
-The package can be installed by adding `html_test_identifiers` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:html_test_identifiers, github: "mirego/html_test_identifiers", tag: "v0.1.1"}
-  ]
-end
 ```
 
 ## Contributors
