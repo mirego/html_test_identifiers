@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/11348/73123813-10d59880-3f62-11ea-87b5-74fe7138f85c.png" width="600" />
   <br /><br />
-  <code>HTMLTestIdentifiers</code> provides the basic functionality to add `data-testid` attribute depending on configuration.
+  <code>HTMLTestIdentifiers</code> provides the basic functionality to add <code>data-testid</code><br /> attribute depending on configuration.
   <br /><br />
   <a href="https://github.com/mirego/html_test_identifiers/actions"><img src="https://github.com/mirego/html_test_identifiers/workflows/CI/badge.svg?branch%3Amaster" /></a>
 </p>
