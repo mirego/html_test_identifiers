@@ -4,6 +4,7 @@
   <code>HTMLTestIdentifiers</code> provides the basic functionality to add <code>data-testid</code><br /> attribute depending on configuration.
   <br /><br />
   <a href="https://github.com/mirego/html_test_identifiers/actions"><img src="https://github.com/mirego/html_test_identifiers/workflows/CI/badge.svg?branch%3Amaster" /></a>
+  <a href="https://hex.pm/packages/html_test_identifiers"><img src="https://img.shields.io/hexpm/v/html_test_identifiers.svg" /></a>
 </p>
 
 ## Installation
