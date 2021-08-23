@@ -33,5 +33,3 @@ jobs:
         run: mix test
       - name: Run Hex Publish test
         run: mix hex.publish --dry-run
-        env:
-          HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
