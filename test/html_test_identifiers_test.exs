@@ -10,7 +10,7 @@ defmodule HTMLTestIdentifiersTest do
     end
 
     test "testid_attribute/1" do
-      assert HTMLTestIdentifiers.testid_attribute("hello") === {:safe, "data-testid=\"hello\""}
+      assert HTMLTestIdentifiers.testid_attribute("hello") === %{"data-testid" => "hello"}
     end
 
     test "testid_key/1" do

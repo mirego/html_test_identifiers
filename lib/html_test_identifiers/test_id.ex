@@ -4,7 +4,7 @@ defmodule HTMLTestIdentifiers.TestID do
   """
 
   def testid_attribute(key) do
-    {:safe, ~s(data-testid="#{key}")}
+    %{"data-testid" => "#{key}"}
   end
 
   def testid_key(key), do: key
