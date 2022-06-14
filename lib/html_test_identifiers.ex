@@ -16,7 +16,7 @@ defmodule HTMLTestIdentifiers do
       with `config :html_test_identifiers, provider: HTMLTestIdentifiers.TestID`
 
       HTMLTestIdentifiers.testid_attribute("hello")
-      # => "data-testid=\"hello\""
+      # =>  %{"data-testid" => "hello"}
 
       HTMLTestIdentifiers.testid_key("hello")
       # => "hello"
