@@ -24,7 +24,7 @@ defmodule HTMLTestIdentifiersTest do
     end
 
     test "testid_attribute/1" do
-      assert is_nil(HTMLTestIdentifiers.testid_attribute("hello"))
+      assert HTMLTestIdentifiers.testid_attribute("hello") ===  %{"data-testid" => nil}
     end
 
     test "testid_key/1" do
